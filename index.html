@@ -8,6 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="assets/images/favicon.png">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <!-- Global CSS -->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
@@ -25,7 +26,7 @@
 	
 	<script type="text/javascript">	
 		$(document).ready(function() {
-			$('.button-more-less').click(function(){
+			$('.more-less').click(function(){
 				$(this).text(function(i, old){
 					return old == 'More' ?  'Less' : 'More';
 				});
@@ -38,12 +39,13 @@
     <div class="wrapper">
         <div class="sidebar-wrapper">
             <div class="profile-container">
-                <img class="profile" src="assets/images/profile.png" style="max-width: 150px; border-radius:50%" />
+                <img class="profile" src="assets/images/profile.png" />
                 <h1 class="name">Rodolfo Forte</h1>
                 <h3 class="tagline">Senior Java Developer / Systems Analyst</h3>
             </div><!--//profile-container-->
             
             <div class="contact-container container-block">
+				<h2 class="container-block-title">Contact</h2>
                 <ul class="list-unstyled contact-list">
                     <li class="email"><i class="fa fa-envelope"></i><a href="mailto: rgsforte@gmail.com">rgsforte@gmail.com</a></li>
                     <li class="website"><i class="fa fa-globe"></i><a href="http://tschis.github.io" target="_blank">tschis.github.io</a></li>
@@ -78,9 +80,9 @@
             <div class="interests-container container-block">
                 <h2 class="container-block-title">Interests</h2>
                 <ul class="list-unstyled interests-list">
-                    <li>Gaming</li>
-                    <li>e-sports</li>
+                    <li>Gaming & e-sports</li>
 					<li>Movies</li>
+					<li>Technology & Space</li>
                     <li>Sci-fi books/series</li>
                 </ul>
             </div><!--//interests-->
@@ -110,12 +112,12 @@
                     </div><!--//meta-->
                     <div class="details">
 						<p>
-							Worked within the client's facilities, leading a team that ranged from 4 to 9 other developers/analysts. 
+							Worked within the client's facilities, leading an agile team that ranged from 4 to 9 other developers and analysts. 
 						</p>
 						<ul>
 							<li>Continuous development and evolution of the web system (ATF) used by the state of Paraíba for financial and tributary administration;</li>
-							<li>Created a web service to allow tax payers to declare and pay taxes online, eliminating previous off-line service, considerably quickening the release of goods at fiscal outposts;</li>
-							<li>Lead and managed the development of the background service responsible for automatically charging tax payers for their invoices;</li>
+							<li>Created a web service to allow taxpayers to declare and pay taxes online, eliminating previous off-line service, considerably quickening the release of goods at fiscal outposts;</li>
+							<li>Lead and managed the development of the background service responsible for automatically charging taxpayers for their invoices;</li>
 							<ul>
 								<li>The service replaced the previous desktop application that used multiple servers instances, eliminated the costs for those servers and databases maintenance, increased speed and accuracy on tax charges, and reduced the number of administrative processes against the state caused by manual tax miscalculations;</li>
 							</ul>
@@ -147,7 +149,7 @@
                             <h3 class="job-title">Java Developer</h3>
                             <div class="time">Jan, 2010 - Jan, 2011</div>
                         </div><!--//upper-row-->
-                        <div class="company">DATAPREV, Brazil</div>
+                        <div class="company">Dataprev, Brazil</div>
                     </div><!--//meta-->
                     <div class="details">
 						<ul>
@@ -155,7 +157,7 @@
 							<ul>
 								<li>Those applications were responsible for the information related to labor ties and other social programs. They served as a basis for studies, researches and programs linked to the labor market, while also subsidizing decision making for governmental actions on a national level;
 							</ul>
-							<li>Technologies: Java, JSP, JSF, JUnit, SQL (Oracle), EclEmma Coverage, CVS and SVN.</li>
+							<li>Technologies: Java, JUnit, JSP, JSF, SQL (Oracle), EclEmma Coverage and CVS.</li>
 						</ul>
                     </div><!--//details-->
                 </div><!--//item-->
@@ -164,43 +166,106 @@
             <section class="section projects-section">
                 <h2 class="section-title"><i class="fa fa-archive"></i>Projects</h2>
                 <div class="intro">
+					<p>Worked on projects of critical importance and high priority for the Secretary of Revenue of Paraíba (my native state in Brazil), including leading roles on development teams, projects analysis, management and execution.</p>
+					<p>I also worked for a project of Dataprev, a public company responsible for many of the Brazilian social programs. For example, it is tied to the processing of over 30 million social security benefits per month, and also the online application that handles unemployment insurance.
                 </div><!--//intro-->
                 <div class="item">
-                    <span class="project-title"><a href="">Cobrança Automática</a></span> - <span class="project-tagline">A background service for the ATF project, it is set to run 24/7 and has the main goal of automatically charging the taxpayers for all invoices addressed to the state of Paraíba (PB), Brazil. </span>
-					<div id="cobaut-more" class="collapse">
-						<div class="details-img"><img src="assets/images/govpb.jpg" class="center"/></div>
-						<p>It is a webservice adopted by most of the states in the country to facilitate the communication between the states. It´s central point is the state of Pernambuco (PE), which provides most of the services and unifies the format of the information, allowing each state to apply it´s own business rules over the declarations, but keeping the same general XML format in all states.</p>
-						<p>The user base consists of thousands of companies and their partners/accountants, who choose the method of payment for their invoices. Though I was only directly in contact with the auditors responsible for this module, I developed most of the webservice and also helped configuring the communication side, working with both our network team and the Pernambuco team.</p>
+                    <span class="project-title" id="atf-project"><a href="#">ATF</a></span> - <span class="project-tagline">The Tax and Financial Administration web system used by the state of Paraíba to provide services that enable and facilitate economic actions by the government. It is used to improve the revenue administration while modernizing the structure of the secretary.</span>
+					<div id="atf-more" class="collapse">
+						<div class="details-img"><img src="assets/images/govpb.jpg" /></div>
+						<p>The user base included thousands of companies and their accountants and partners. Since we worked within the government's facilities, I was directly connected to the product owners responsible for the management of their modules and definitions of business rules.</p>
+						<p>The system primarily uses Informix database for all it's data, but recently started using Oracle for some specific cases (like electronic invoices and other documents and declarations). Since the state has to keep record of all the goods coming into it (for tax calculation purposes), the quantity of information is huge, and I dealt with table rows numbering up to over a billion.</p>
+						<p>During my work as a developer, I created and tested services for several modules of the application. After I was promoted to Systems Analyst, I helped with the implementation of the software development process chosen by the client, setting up the quality of the documentation to be used, reporting what affected daily work and suggesting changes.</p>
+						<p>By demonstrating quick growth and personal development, I was given the Team Leader position and aggregated lots of responsabilities, such as dealing with expectations, risks, requirements, schedules, priorities and different kinds of reports for the project manager.</p>
+						<p>When the client accepted to change the development process to Scrum, I also studied and became a Professional Scrum Master. Although the pace of change into Scrum was really slow, I always pushed for what was feasible for the team to achieve.</p>
+						<p>Technologies and tools: Java, JUnit, JavaScript, JSP, Servlets, EJB3, SQL (Informix & Oracle), Scrum, JBoss, SVN, CVS, Maven, Bugzilla, Redmine and Jira.</p>
 					</div>
-					<p><button class="button-more-less btn btn-sm btn-info" data-toggle="collapse" data-target="#cobaut-more">More</button></p>
+					<div align="right">
+						<span class="span-link more-less" data-toggle="collapse" data-target="#atf-more">More</span>
+					</div>
                 </div><!--//item-->
                 <div class="item">
-                    <span class="project-title"><a href="#">ATFD</a></span> - <span class="project-tagline">A Desktop application used to calculate and charge the taxpayers for the invoices addressed to the state of Paraíba (PB), Brazil, while they enter the state.</span>
-					<div id="atfd-more" class="collapse details">
-						<div class="details-img"><img src="assets/images/govpb.jpg" class="center"/></div>
-						<p>It is a webservice adopted by most of the states in the country to facilitate the communication between the states. It´s central point is the state of Pernambuco (PE), which provides most of the services and unifies the format of the information, allowing each state to apply it´s own business rules over the declarations, but keeping the same general XML format in all states.</p>
-						<p>The user base consists of thousands of companies and their partners/accountants, who choose the method of payment for their invoices. Though I was only directly in contact with the auditors responsible for this module, I developed most of the webservice and also helped configuring the communication side, working with both our network team and the Pernambuco team.</p>
+                    <span class="project-title" id="cobaut-project"><a href="">Cobrança Automática</a></span> - <span class="project-tagline">A Java background service for the <a href="#atf-project">ATF</a> web system, it is set to run 24/7 and has the main goal of automatically charging the taxpayers for all invoices addressed to the state of Paraíba. </span>
+					<div id="cobaut-more" class="collapse">
+						<div class="details-img"><img src="assets/images/govpb.jpg" /></div>
+						<p>This is the project I am most proud of, as it is the most impactful and complex of them. Technically, it required parallel processing, complex business logics evaluations, and high availability and performance. Professionally, it took my commitment and responsability to the next level. It was an amazing experience and opportunity. I am happy to have been a part of it and proving myself with it's success.</p>
+						<p>The project is of extreme importance to the state. It replaced the previous charging system, <a href="#atfd-project">ATFD</a>, and was given high priority by the secretary, mainly because it's goals included:</p>
+						<ul>
+							<li>increase the tax collection;</li>
+							<li>lower the amount of errors caused by the manual inputs during tax calculations, and the consequent number of administrative processes against the secretary caused by them;</li>
+							<li>release many of the tax auditors from this manual activity, allowing them to exercise other inspection duties;</li>
+							<li>eliminate multiple non-transactional databases and application servers;
+								<ul>
+									<li>remove the necessity and complexity of the data migration from these local databases to the central;</li>
+									<li>decrease costs with configuration and maintenance of all these servers;</li>
+								</ul>
+							</li>
+							</li>
+							<li>increase accuracy and speed on the tax charging;</li>
+							<li>provide many different reports about the charged taxes;</li>
+						</ul>
+						<p>Joining at the beginning, I participated in all stages of it's development: requirements, impact analysis, construction, testing, documentation and deployment. I was one of the very few people who had deep knowledge and understanding of how everything worked, and was asked multiple times to create and give presentations to help distribute information about it's details.</p>
+						<p>Even though I was focused on the back end service, I also mentored other five developers working on the front end functionalities that would be responsible for the parameterization. That was my first contact with team leadership, and although the whole project was built within difficult and stressful conditions, due to legislation complexity, changes in project management, multiple members quitting at once, and time restraints, through perseverance and hard work we achieved the goal and delivered the first version of the product with quality, and without any big problems or consequences during deployment.</p>
+						<p>This was one of the first projects of the <a href="#atf-project">ATF</a> system to have a large number of unit tests. This happened because I personally pushed for the usage of JUnit, and the result was the back end having a broad coverage.</p>
+						<p>Technologies and tools: Java, JUnit, JavaScript, JSP, Servlets, EJB3, SQL (Informix), JBoss, SVN and Redmine.</p>
 					</div>
-					<p><button class="button-more-less btn btn-sm btn-info" data-toggle="collapse" data-target="#atfd-more">More</button></p>
+					<div align="right">
+						<span class="span-link more-less" data-toggle="collapse" data-target="#cobaut-more">More</span>
+					</div>
+                </div><!--//item-->
+                <div class="item">
+                    <span class="project-title"><a href="">Fronteira Livre</a></span> - <span class="project-tagline">A project for the <a href="#atf-project">ATF</a> web system, the goal was to "open the borders" of the state, facilitating transportation and speeding up the delivery of goods to taxpayers of Paraíba, Brazil.</span>
+					<div id="fl-more" class="collapse">
+						<div class="details-img"><img src="assets/images/govpb.jpg" /></div>
+						<p>A set of functionalities that, together with <a href="#cobaut-project">Cobrança Automática</a>, allowed better inspection and control over the couriers data, facilitating analysis and tax charging of goods coming into the state through them. As long as the couriers followed a set of rules, they would be allowed some benefits.</p>
+						<p>With this change, some things could be achieved:</p>
+						<ul>
+							<li>the state had a better procedure for online analysis and charging of goods brought via couriers;</li>
+							<li>the couriers would receive some tax benefits, their trucks could take products into their facilities, not having to stop at fiscal outposts while entering the state;</li>
+							<li>the companies or people could have faster delivery, while goods were kept in safer places;</li>
+						</ul>
+					</div>
+					<div align="right">
+						<span class="span-link more-less" data-toggle="collapse" data-target="#fl-more">More</span>
+					</div>
+                </div><!--//item-->
+                <div class="item">
+                    <span class="project-title" id="atfd-project"><a href="#">ATFD</a></span> - <span class="project-tagline">The ATF-Desktop was a Java application used to manually calculate and charge the taxpayers for the invoices addressed to the state of Paraíba, while they enter the state.</span>
+					<div id="atfd-more" class="collapse">
+						<div class="details-img"><img src="assets/images/govpb.jpg" /></div>
+						<p>ATFD used local JBoss application servers on several outposts along the geographical border of the state, with local Informix databases that stored information and then migrated it to the central. It also used services of the central application server to calculate the taxes, based on information about the products and economic activity of the taxpayers.</p>
+						<p>Though the user base included mainly tax auditors who were charging the products on those outposts, the system impact should be considered bigger, as it affected thousands of companies (and, in a way, indirectly affecting their clients).</p>
+						<p>This project was particularly complicated because of it's nature of having multiple non-transactional databases, application servers, and constant data migration, while being a highly critical and important project for the state. It needed attention 24/7, and many outposts had a limited infrastructure that wasn't good enough, so network/power problems that could cause data inconsistency needed to be dealt with on a daily basis.</p>
+						<p>It's interface was written in Swing, but I preferred to work on the back end. I developed functionalities which involved complex business rules to calculate the taxes. For a long time, the project was set to be migrated into the online <a href="#atf-project">ATF</a> system. I used my time as the responsible person behind ATFD to learn how it worked and absorb business knowledge that could facilitate this migration. The goal was achieved with the development of <a href="#cobaut-project">Cobrança Automática</a></p>
+					</div>
+					<div align="right">
+						<span class="span-link more-less" data-toggle="collapse" data-target="#atfd-more">More</span>
+					</div>
                 </div><!--//item-->
 				<div class="item">
-                    <span class="project-title"><a href="#intro">GNRE Paraíba</a></span> - <span class="project-tagline">A webservice created by the state of Paraíba (PB), Brazil, to allow taxpayers to declare their own taxes.</span>
-					<div id="gnre-more" class="collapse details">
-						<div class="details-img"><img src="assets/images/gnre.png" class="center"/><img src="assets/images/govpb.jpg" class="center"/></div>
-						<p>GNRE is a webservice adopted by most states in the country to facilitate the communication between the states. It´s central point is the state of Pernambuco (PE), which provides most of the services and unifies the format of the information, allowing each state to apply it´s own business rules over the declarations, but keeping the same general XML format in all states.</p>
-						<p>The user base consists of thousands of companies and their partners/accountants, who are allowed or required to use this method of payment for their taxes.</p>
-						<p>I developed most of the webservice and also helped configuring the communication, working with both network teams of Paraíba and Pernambuco.</p>
+                    <span class="project-title"><a href="#intro">GNRE Paraíba</a></span> - <span class="project-tagline">A Java webservice that allowed taxpayers of the state of Paraíba to declare their own taxes.</span>
+					<div id="gnre-more" class="collapse">
+						<div class="details-img"><img src="assets/images/gnre.png" /><img src="assets/images/govpb.jpg" /></div>
+						<p>GNRE is a webservice adopted by most states in the country to facilitate the communication between the states. The central point is the state of Pernambuco, which provides most of the services and unifies the format of the information, allowing each state to apply it´s own business rules over the declarations, but keeping the same general XML format throughout all states.</p>
+						<p>The user base consists of companies and their partners/accountants, who are allowed or required to use this method of payment for their taxes.</p>
+						<p>I developed most of the webservice in Java, and followed the configuration of the network, facilitating communication between both network teams of Paraíba and Pernambuco.</p>
 					</div>
-					<p><button class="button-more-less btn btn-sm btn-info" data-toggle="collapse" data-target="#gnre-more">More</button></p>
+					<div align="right">
+						<span class="span-link more-less" data-toggle="collapse" data-target="#gnre-more">More</span>
+					</div>
                 </div><!--//item-->
                 <div class="item">
-                    <span class="project-title"><a href="#">CAGED</a></span> - <span class="project-tagline">The General Register of Employed and Unemployed (CAGED) was created as a permanent record of admissions and dismissal of employees under the Labor Laws of Brazil.</span>
+                    <span class="project-title"><a href="#">CAGED</a></span> - <span class="project-tagline">The General Register of Employed and Unemployed was created as a permanent record of admissions and dismissal of employees under the Labor Laws of Brazil.</span>
 					<div id="caged-more" class="collapse">
-						<div class="details-img"><img src="assets/images/dataprev.jpg" class="center"/></div>
-						<p>I wrote tests for the applications used by the project to generate and manipulate data that is used by the Unemployment Insurance Program to check the data related to labor ties, in addition to other social programs.</p>
-						<p>The generated data also served as a basis for studies, researches and programs linked to the labor market, while also subsidizing decision making for governmental actions on a national level.</p>
+						<div class="details-img"><img src="assets/images/dataprev.jpg"/></div>
+						<p>I wrote tests for the applications of CAGED to generate and manipulate data that is used by the Unemployment Insurance Program to check the data related to labor ties, in addition to other social programs. The data also served as a basis for studies, researches and programs linked to the labor market, while also subsidizing decision making for governmental actions on a national level.</p>
+						<p>JSF and JSP were occasionally used, but most of my focus was on writing tests in Java, using JUnit.</p>
+						<p>Even though I was an intern, I quickly grew within the team, and soon developed a connection of trust and respect with both the project manager and the lead developer, many times being requested to fix wrong data by writing Java programs to execute SQL updates into the Oracle database. This was a huge responsibility considering the importance of the data being manipulated.</p>
+						<p>Technologies and tools: Java, JUnit, JSP, JSF, SQL (Oracle), EclEmma Coverage and CVS.</p>
 					</div>
-					<p><button class="button-more-less btn btn-sm btn-info" data-toggle="collapse" data-target="#caged-more">More</button></p>
+					<div align="right">
+						<span class="span-link more-less" data-toggle="collapse" data-target="#caged-more">More</span>
+					</div>
                 </div><!--//item-->
             </section><!--//section-->
             
@@ -231,8 +296,8 @@
     </div>
 	<!-- 	
 		This template is released under the Creative Commons Attribution 3.0 License.
-		It was made by Xiaoying Riley, of http://themes.3rdwavemedia.com, but I edited it and removed a lot of content. 
-		I decided to remove the footer but leave this comment as sign and a reminder that it couldn't be done without her template. 
+		It was made by Xiaoying Riley, of http://themes.3rdwavemedia.com, but I edited it and removed or changed a lot of content. 
+		I decided to remove the footer but leave this comment as a sign and a reminder that it couldn't be done without her template. 
 		Thank you!
 	-->
     <!-- Javascript -->          

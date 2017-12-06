@@ -84,6 +84,8 @@ p {
 }
 .sidebar-wrapper .profile {
   margin-bottom: 15px;
+  max-width: 150px; 
+  border-radius: 50%
 }
 .sidebar-wrapper .contact-list .fa {
   margin-right: 5px;
@@ -217,7 +219,7 @@ p {
 }
 .main-wrapper .project-title {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 0;
   margin-bottom: 5px;
 }
@@ -225,7 +227,7 @@ p {
   margin-bottom: 30px;
 }
 .main-wrapper .projects-section .item {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 .skillset .item {
   display: inline-block;
@@ -233,20 +235,18 @@ p {
   font-size: 6em;
   overflow: hidden;
 }
-.summary, .details, .projects-section, ul {
+.summary, .experiences-section, .projects-section {
 	text-align:justify;
-}
-
-.projects-section img.center {
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  margin: 1em;
-  max-width: 250px;
 }
 
 .projects-section .details-img {
 	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.span-link {
+	cursor: pointer;
 }
 
 /* Extra small devices (phones, less than 768px) */
