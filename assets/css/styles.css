@@ -236,10 +236,18 @@ p {
 .summary, .details, .projects-section, ul {
 	text-align:justify;
 }
+
 .projects-section img.center {
-  display: block;
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+  margin: 1em;
+  max-width: 250px;
+}
+
+.projects-section .details-img {
+	text-align: center;
 }
 
 /* Extra small devices (phones, less than 768px) */
